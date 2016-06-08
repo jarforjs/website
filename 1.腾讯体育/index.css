@@ -1,0 +1,290 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding:0;
+}
+html,body{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    background: #f4f4f4;
+    /*以下的样式属性是可继承的属性,我们尽量不要把其放在我们的*号当中,而是放在body中,防止CSS优先级的限制导致下面修改这些样式不生效*/
+    font-size: 14px;
+    font-family: "\5FAE\8F6F\96C5\9ED1",Helvetica,sans-serif;
+    color: #000;
+}
+a,a:hover,a:active,a:visited,a:target{
+    text-decoration: none;
+    color:#000;
+    display: block;
+}
+ul li{
+    list-style: none;
+}
+.box{
+    width: 800px;
+    margin: 20px auto;
+}
+
+/*calender start*/
+.calender{
+    height: 80px;
+    border: 1px solid #dcdcdc;
+    background: white;
+    position: relative;
+}
+/*这里不要写成.calendar a,这样的意思是calendar下的子子孙孙a都要适用这个样式*/
+.calender .calBtn{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width:32px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 24px;
+}
+.calender .calBtn:hover{
+    background: #f4f4f4;
+}
+
+/*加空格和不加空格:子子孙孙,不加空格在本身上进行二次筛选(同级筛选)*/
+.calender .calBtn.left{
+    left: 0;
+}
+.calender .calBtn {
+    right: 0;
+}
+
+/*使用css画三角形*/
+.triangle{
+    position: absolute;
+    /*加了定位就不用写display:block了自动变成块状元素了*/
+    top:50%;
+    left:50%;
+    margin-top: -8px;
+    .display: block;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+
+}
+.leftFir{
+    margin: -8px 0 0 -20px;
+    border-right-color: #1c90f2;
+}
+.leftCon{
+    margin-left:-18px;
+    border-right-color: #fff;
+}
+.rightFir{
+    margin: -8px 0 0 -12px;
+    border-left-color: #fff;
+}
+.rightCon{
+    margin-left:-10px;
+    border-left-color: #1c90f2;
+}
+.calList{
+    position: relative;
+    margin: 0 31px;
+    padding:5px 0;
+    height: 70px;
+    overflow: hidden;
+}
+.calList ul{
+    position: absolute;
+    top:5px;
+    width: 200%;
+    height:70px;
+    left:0;
+}
+.calList ul li{
+    width:81px;
+    height: 100%;
+    margin: 0 12px;
+    float: left;
+    cursor: pointer;
+}
+.calList ul li span{
+    display: block;
+    text-align: center;
+}
+.calList ul li .week{
+    height: 19px;
+    margin-top: 10px;
+    line-height: 19px;
+    color: #b9b9b9;
+}
+.calList ul li .date{
+    height: 24px;
+    margin-top: 5px;
+    line-height: 24px;
+    font-size: 18px;
+}
+.calList ul li:hover{
+    background: #e4f0fa;
+}
+
+.calList ul li:hover span{
+    color: #1c90f2;
+}
+.calList ul li.bg{
+    background: #1c90f2;
+}
+.calList ul li.bg span{
+    color: #ffffff;
+}
+
+/*calender end*/
+
+
+/*--match start--*/
+.match{
+    overflow: hidden;
+    position: relative;
+}
+.matchDate .date {
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.matchDate .matchList {
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-bottom: none;
+}
+
+.matchDate .matchList li {
+    position: relative;
+    height: 80px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.matchDate .matchList li:hover {
+    background: #fafafa;
+}
+.matchList li .left {
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+.matchList li .left span {
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 80px;
+    font-size: 14px;
+}
+
+.matchList li .left span.time {
+    padding-left: 18px;
+    width: 80px;
+    color: #515151;
+}
+
+.matchList li .left span.type {
+    width: 102px;
+    color: #a0a0a0;
+}
+
+.matchList li .right {
+    float: right;
+    padding-right: 18px;
+    width: 75px;
+    height: 100%;
+}
+
+.matchList li .right a {
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    color: #1C90F2;
+    font-size: 13px;
+}
+
+.matchList li .right a.video {
+    margin-top: 15px;
+    background: url("video_post_game_3128c9.png") no-repeat center left;
+}
+
+.matchList li .right a.replay {
+    margin-top: 10px;
+    background: url("video_post_playback_4b7dc5.png") no-repeat center left;
+}
+
+.matchList li .right a:hover {
+    text-decoration: underline;
+}
+
+.matchList li .middle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -185px;
+    width: 370px;
+    height: 100%;
+}
+
+.matchList li .middle a {
+    width: 145px;
+    height: 100%;
+}
+
+.matchList li .middle a:hover {
+    color: #1C90F2;
+}
+
+.matchList li .middle a img {
+    display: block;
+    margin-top: 17px;
+    width: 48px;
+    height: 45px;
+}
+
+.matchList li .middle a.home img {
+    float: left;
+}
+
+.matchList li .middle a.away img {
+    float: right;
+}
+
+.matchList li .middle a span {
+    display: block;
+    line-height: 80px;
+    font-size: 16px;
+}
+
+.matchList li .middle a.home span {
+    float: left;
+    margin-left: 5px;
+}
+
+.matchList li .middle a.away span {
+    float: right;
+    margin-right: 5px;
+    text-align: right;
+}
+
+.matchList li .middle a.home {
+    float: left;
+}
+
+.matchList li .middle a.away {
+    float: right;
+}
+
+.matchList li .middle .score {
+    float: left;
+    width: 80px;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 20px;
+    color: #1C90F2;
+}
+
+/*--match end--*/
+
