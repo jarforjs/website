@@ -1,0 +1,170 @@
+.p-login .header {
+    height: 78px;
+    border-bottom: 1px solid #DBDBDB;
+}
+.p-login .wrap {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 9px 30px;
+    width: 962px;
+}
+
+.p-login .header .logo {
+    float: left;
+    margin-top: 24px;
+    width: 104px;
+    height: 47px;
+    background: url("../image/2016-06-03_164007.jpg") no-repeat;
+}
+.p-login .header .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.p-login .header .login-text {
+    float: left;
+    margin-left: 20px;
+    margin-top: 38px;
+    padding: 0 14px;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+    font-size: 18px;
+    border-left: 1px solid #C9C9C9;
+}
+.p-login .header .reg-area {
+    float: right;
+    margin-top: 27px;
+    height: 32px;
+    color: #666;
+    line-height: 32px;
+}
+.p-login .header .reg-area .reg-btn {
+    display: inline-block;
+    margin-left: 5px;
+    width: 62px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #666;
+    font-weight: 700;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+}
+.p-login .body {
+    background: #F5FBFD;
+}
+
+.p-login .body .login-logo {
+    float: left;
+    margin-top: 49px;
+    width: 623px;
+    height: 337px;
+    background: url(//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/user/img/login-logo_30a0915.png) no-repeat;
+}
+.p-login .body .login-area {
+    float: right;
+    position: relative;
+    margin-top: 49px;
+    padding: 20px 14px;
+    width: 279px;
+    min-height: 247px;
+    border: 1px solid #eee;
+    background: #fff;
+    _height: 247px;
+}
+
+.p-login .body .login-area .title {
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 30px;
+}
+.p-login .body .login-area .tang-pass-login {
+    padding: 0;
+}
+
+
+.pass-text-input {
+
+    padding: 11px 20px 11px 35px;
+    width: 222px;
+    height: 16px;
+    line-height: 16px;
+    color: #999;
+    border: 1px solid #F0F0F0;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.error{
+    font-size:14px;
+    color: #1b66c7;
+    float: right;
+    margin-bottom: 10px;
+}
+.error a{
+    color: #1b66c7;
+    text-decoration: none;
+}
+
+.pass-button-submit{
+    margin-top: 10px;
+    width: 279px;
+    height: 39px;
+    border: 1px solid #FD528B;
+    background: #F69;
+}
+
+.w-footer-mini {
+    border-top: 5px solid #DBDBDB;
+    padding: 40px 0 20px
+}
+.w-footer-mini a{
+    text-decoration: none;
+}
+
+
+.w-footer-mini .wrap {
+    width: 980px;
+    margin: 0 auto
+}
+
+.w-footer-mini .links {
+    color: #666;
+    text-align: center
+}
+
+.w-footer-mini .links a,.w-footer-mini .links span {
+    display: inline-block
+}
+
+.w-footer-mini .links .link {
+    color: #666
+}
+
+.w-footer-mini .links .tel {
+    color: #FD678C;
+    margin: 0
+}
+
+.w-footer-mini .links span {
+    margin: 0 12px;
+    color: #ccc
+}
+
+.w-footer-mini .site-info {
+    line-height: 40px;
+    font-family: SimSun;
+    color: #999
+}
+
+.w-footer-mini .site-info .link {
+    color: #999
+}
+
+.w-footer-mini .site-info .copyright {
+    font-family: "Microsoft Yahei"
+}
