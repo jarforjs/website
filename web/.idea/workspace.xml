@@ -26,7 +26,7 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="672">
+                <state relative-caret-position="832">
                   <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
                   <folding>
                     <element signature="e#262#955#0" expanded="false" />
@@ -91,7 +91,7 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="35931">
+                <state relative-caret-position="44486">
                   <caret line="1711" column="13" selection-start-line="1711" selection-start-column="13" selection-end-line="1711" selection-end-column="13" />
                   <folding />
                 </state>
@@ -105,7 +105,7 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="14">
+                <state relative-caret-position="26">
                   <caret line="1740" column="0" selection-start-line="1740" selection-start-column="0" selection-end-line="1740" selection-end-column="0" />
                   <folding />
                 </state>
@@ -131,7 +131,7 @@
         <option value="$PROJECT_DIR$/../../Third formal class-Git/JavaScript201603/正式课第四周第二天/轮播图左右版/js/banner.js" />
         <option value="$PROJECT_DIR$/temp.html" />
         <option value="$PROJECT_DIR$/百度搜索.html" />
-        <option value="$USER_HOME$/Desktop/login/loginpage-u=https---www.nuomi.com--cid=002540.htm" />
+        <option value="$PROJECT_DIR$/../../login/loginpage-u=https---www.nuomi.com--cid=002540.htm" />
         <option value="$PROJECT_DIR$/css/login.css" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/css/banner.css" />
@@ -320,14 +320,15 @@
       <workItem from="1465739155300" duration="6124000" />
       <workItem from="1465784962536" duration="19962000" />
       <workItem from="1465860958660" duration="107000" />
+      <workItem from="1465980738335" duration="93000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184595000" />
+    <option name="totallyTimeSpent" value="184688000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5980966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -734,55 +735,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/自定义选项卡.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../practice/utils注释版.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2262">
-          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../test/选项卡.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Third formal class notes/第三周/第一、scrollTop返回顶部.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-338">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Third formal class-Git/JavaScript201603/正式课第四周第二天/轮播图左右版/js/banner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="59" column="52" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Third formal class notes/tween.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-542">
-          <caret line="197" column="25" selection-start-line="197" selection-start-column="12" selection-end-line="197" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Third formal class-Git/JavaScript201603/20160601_Ajax分页/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2262">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/自定义选项卡.html" />
+    <entry file="file://$PROJECT_DIR$/../../practice/utils注释版.js" />
+    <entry file="file://$PROJECT_DIR$/../../test/选项卡.html" />
+    <entry file="file://$PROJECT_DIR$/../../Third formal class notes/第三周/第一、scrollTop返回顶部.html" />
+    <entry file="file://$PROJECT_DIR$/../../Third formal class-Git/JavaScript201603/正式课第四周第二天/轮播图左右版/js/banner.js" />
+    <entry file="file://$PROJECT_DIR$/../../Third formal class notes/tween.js" />
+    <entry file="file://$PROJECT_DIR$/../../Third formal class-Git/JavaScript201603/20160601_Ajax分页/search.html" />
     <entry file="file://$PROJECT_DIR$/temp.html" />
     <entry file="file://$PROJECT_DIR$/百度搜索.html" />
     <entry file="file://$PROJECT_DIR$/js/jsonp.js">
@@ -792,7 +751,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/login/loginpage-u=https---www.nuomi.com--cid=002540.htm" />
+    <entry file="file://$PROJECT_DIR$/../../login/loginpage-u=https---www.nuomi.com--cid=002540.htm" />
     <entry file="file://$PROJECT_DIR$/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="669">
@@ -899,7 +858,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
+        <state relative-caret-position="832">
           <caret line="203" column="0" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
           <folding>
             <element signature="e#262#955#0" expanded="false" />
@@ -960,7 +919,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
+        <state relative-caret-position="26">
           <caret line="1740" column="0" selection-start-line="1740" selection-start-column="0" selection-end-line="1740" selection-end-column="0" />
           <folding />
         </state>
