@@ -67,7 +67,7 @@ var ads2 = new AutoBanner("ad", "ad.txt", 3000);
     var goTop = document.getElementById("j-go-top");
     var goTopBtn = document.getElementsByClassName("go-top-2")[0];
     var topSearch = document.getElementsByClassName("w-top-search-box")[0];
-    var sidecate=document.getElementById("sidecate");
+    //var sidecate=document.getElementById("sidecate");
     goTopBtn.onclick = function () {
         window.onscroll = null;
         goTop.style.display = "none";
@@ -87,14 +87,15 @@ var ads2 = new AutoBanner("ad", "ad.txt", 3000);
             utils.getWin('scrollTop', scrollTop);
         }, interval);
     };
-    window.onscroll = showBtn;
+    window.addEventListener('scroll',showBtn,false);
+    //window.onscroll = showBtn;
     function showBtn() {
         var winScrollTop = utils.getWin('scrollTop');
         var screenHeight = utils.getWin('clientHeight');
         goTop.style.display = winScrollTop - screenHeight > 0 ? "block" : "none";
         topSearch.style.display = winScrollTop > 666 ? "block" : "none";
-        sidecate.style.position=winScrollTop > 840 ? "fixed" : "absolute";
-        sidecate.style.top=winScrollTop > 840 ? "170px" : "1074px";
+        //sidecate.style.position=winScrollTop > 840 ? "fixed" : "absolute";
+        //sidecate.style.top=winScrollTop > 840 ? "170px" : "1074px";
         /*var stickyPanel=document.getElementById("sticky-panel");
          var stickyPanelList=stickyPanel.getElementsByTagName("li");
          winScrollTop > 1300 ? utils.addClass(stickyPanelList[0],"active"): null;*/
@@ -200,4 +201,75 @@ var ads2 = new AutoBanner("ad", "ad.txt", 3000);
         animate(width1200, {left: -step * 964}, 300);
     };
 })();
+
+//楼层导航
+~function(){
+    var floorAry = [
+        {id: "oneFloor"},
+        {id: "twoFloor"},
+        {id: "threeFloor"},
+        {id: "fourFloor"},
+        {id: "fiveFloor"},
+        {id: "sixFloor"},
+        {id: "sevenFloor"},
+        {id: "eightFloor"}
+    ];
+
+    var floorIndex = document.getElementById("sticky-panel");
+    var oLis = utils.children(floorIndex);
+    var sidecate=document.getElementById("sidecate");
+    ~function () {
+        for (var i = 0, len = floorAry.length; i < len; i++) {
+            var curFloor = floorAry[i];
+            var curFloorEle = document.getElementById(curFloor["id"]);
+            curFloor["top"] = utils.offset(curFloorEle).top;
+        }
+        utils.css(floorIndex, "marginTop", -len * 31 / 2);
+
+    }();
+
+    function showFloor() {
+        var curTop = utils.getWin("scrollTop"), curHeight = utils.getWin("clientHeight");
+
+        sidecate.style.display = curTop + curHeight > oLis[0].getAttribute("zhufengTop") ? "block" : "none";
+    }
+    window.addEventListener('scroll',showFloor,false);
+    var timer = null;
+    for (var i = 0; i < oLis.length; i++) {
+        var curLi = oLis[i];
+        curLi.onclick = function () {
+            window.onscroll = null;
+            var target = this.getAttribute("zhufengTop");
+            move(target);
+        }
+    }
+    function move(target) {
+        var begin = utils.getWin("scrollTop"), duration = 500;
+        var step = Math.abs((target - begin) / duration * 10);
+        _move();
+        function _move() {
+            window.clearTimeout(timer);
+            var cur = utils.getWin("scrollTop");
+            if (target > begin) {
+                if (cur + step >= target) {
+                    window.onscroll = showFloor;
+                    utils.getWin("scrollTop", target-30);
+                    return;
+                }
+                utils.getWin("scrollTop", cur + step);
+            } else if (target < begin) {
+                if (cur - step <= target) {
+                    window.onscroll = showFloor;
+                    utils.getWin("scrollTop", target-30);
+                    return;
+                }
+                utils.getWin("scrollTop", cur - step);
+            } else {
+                window.onscroll = showFloor;
+                return;
+            }
+            timer = window.setTimeout(_move, 10);
+        }
+    }
+}();
 

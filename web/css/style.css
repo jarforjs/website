@@ -811,43 +811,35 @@
 
 
 /*问题*/
-.today .slide ul li .imgBox:hover .range{
+.today .slide ul li .imgBox .range{
+    opacity: 0;
+    transition: opacity 1s;
+    height: 36px;
+    width:214px;
     position: absolute;
     left:0;
     bottom: 0;
     line-height:36px;
-    height: 36px;
     padding:0 5px;
     font-size: 12px;
-    width:226px;
-    opacity: 1;
-    transition: opacity 1s;
-
-}
-.today .slide ul li .imgBox:hover .rangeBg{
-    position: absolute;
-    left: 0;
-    bottom:0;
-    height:36px;
-    width:224px;
     background: #000000;
+}
+.today .slide ul li .imgBox:hover .range{
     opacity: .7;
-    filter: alpha(opacity=70);
+    transition: opacity 1s;
 }
 .today .slide ul li .imgBox .rangeInner{
     color: #FFffff;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    .position: relative;
-    z-index: 1;
     position: absolute;
 }
 .today .slide ul li .imgBox .rangeInner .locate{
     display: inline-block;
     position: relative;
     top: 1px;
-    margin-right: 3px;
+    margin-right: 5px;
     width:12px;
     height: 12px;
     background: url("../image/white-locate_b59a216[1].png") no-repeat;
@@ -1151,19 +1143,21 @@
 }
 
 
-
+/*楼层*/
 .sidecate {
-    position: absolute;
-    z-index: 500;
-    left: 50%;
-    margin-left: -651px;
-    top:1074px;
+    display: none;
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    margin-top: -30px;
+    width: 30px;
+    z-index: 1;
 }
 
-.sidecate li .iconfont:after {
-    font-size: 18px;
-    color: #666
-}
+/*.sidecate li .iconfont:after {*/
+    /*font-size: 18px;*/
+    /*color: #666*/
+/*}*/
 
 .sidecate li a {
     display: block;
@@ -1178,15 +1172,15 @@
     display: none
 }
 
-.sidecate li a:hover,.sidecate li a.active {
+.sidecate li a:hover{
     color: #ff519e
 }
 
-.sidecate li a:hover .inner-text,.sidecate li a.active .inner-text {
+.sidecate li a:hover .inner-text{
     display: inline
 }
 
-.sidecate li a:hover .inner-ico,.sidecate li a.active .inner-ico {
+.sidecate li a:hover .inner-ico{
     display: none
 }
 
@@ -1199,7 +1193,7 @@
     margin-left: 12px
 }
 
-.sidecate li a:hover:after,.sidecate li a.active:after {
+.sidecate li a:hover:after{
     display: none
 }
 
@@ -1237,15 +1231,6 @@
 /*丽人*/
 .sidecate li .iconfont-10955:after {
     content: '\e63e'
-}
-
-
-.active{
-    display: none;
-}
-.active{
-    display: block;
-    color:red;
 }
 
 
@@ -1740,4 +1725,24 @@
 }
 .height367{
     height:361px;
+}
+
+
+
+.floorIndex {
+    display: none;
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    margin-top: -30px;
+    width: 30px;
+    z-index: 1;
+}
+
+.floorIndex li {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px dashed #ccc;
+    cursor: pointer;
 }
