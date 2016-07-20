@@ -1,35 +1,35 @@
-var http = require("http"),
-    url = require("url"),
-    fs = require("fs");
+var http = require("http");
+var url = require("url");
+var fs = require("fs");
+var contentType = require("./nodeAPI/contentType");
+var server = http.createServer(function (request, response) {
 
-var routing = require("./nodeAPI/routing");
+    var urlObj = url.parse(request.url, true);
+    var pathname = urlObj.pathname, query = urlObj.query;
+   // console.log(pathname);
 
-var server = http.createServer(function (req, res) {
-    var urlObj = url.parse(req.url, true), pathname = urlObj.pathname, query = urlObj.query;
-
-    //->资源文件的路由判断
+    //->如果请求的资源文件是HTML/CSS/JS文件
     var reg = /\.(TXT|JSON|HTML|CSS|JS|PNG|JPG|GIF|JPEG|SVG|ICON|ICO|MP3|OGG|WAV|MP4|WEBM|BMP)/i;
-    try {
-        if (reg.test(pathname)) {
+    if (reg.test(pathname)) {
+        try {
             var suffix = reg.exec(pathname)[1].toUpperCase();
-            var suffixType = routing.suffixType(suffix);
-            var conFile = /(HTML|JSON|CSS|JS|TXT|SVG)/i.test(suffix) ? fs.readFileSync("." + pathname, "utf8") : fs.readFileSync("." + pathname);
-            res.writeHead(200, {'content-type': suffixType + ";charset=utf-8"});
-            res.end(conFile);
-            return;
-        }
-    } catch (e) {
-        res.writeHead(404);
-        res.end();
-    }
+            var conType = contentType.getType(suffix);
+            reg = /^(TXT|JSON|HTML|CSS|JS)$/i;
+            var conFile = null;
+            if (reg.test(suffix)) {
+                conFile = fs.readFileSync("." + pathname, "utf8");
+                response.writeHead(200, {'content-type': conType + ';charset=utf-8;'});
+            } else {
+                conFile = fs.readFileSync("." + pathname);
+                response.writeHead(200, {'content-type': conType});
+            }
+            response.end(conFile);
+        } catch (e) {
 
-    if (pathname === "/bannerInfo") {
-        var con = fs.readFileSync("./nodeAPI/json/banner.json", "utf8");
-        con = con === "" ? [] : JSON.parse(con);
-        res.writeHead(200, {"content-type": "application/json;charset=utf-8"});
-        res.end(JSON.stringify(con));
+        }
+        return;
     }
 });
-server.listen(80, function () {
-    console.log("服务创建成功,正在监听80端口~");
+server.listen(80,function () {
+    console.log("80")
 });
