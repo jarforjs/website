@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <table class="table table-bordered">
+        <tr>
+            <td>序号</td>
+            <td>名称</td>
+            <td>价格</td>
+            <td>数量</td>
+            <td>小计</td>
+            <td>操作</td>
+        </tr>
+        <tr v-for="phone in phones">
+            <td>{{$index}}</td>
+            <td>{{phone.name}}</td>
+            <td>{{phone.price}}</td>
+            <td><input type="text" v-model="phone.count"></td>
+            <td>{{phone.price*phone.count}}</td>
+            <td><button class="btn btn-primary" @click="del(phone)">删除</button></td>
+        </tr>
+        <tr>
+            <td colspan="6">总价格:{{total()}}</td>
+        </tr>
+    </table>
+
+    <div class="container">
+        <div class="form-group">
+            <label class="control-label">手机名</label>
+            <input type="text" v-model="newData.name" class="form-control" value="{{name}}">
+        </div>
+        <div class="form-group">
+            <label class="control-label">价格</label>
+            <input type="text" v-model="newData.price" class="form-control" value="{{price}}">
+        </div>
+        <div class="form-group">
+            <label class="control-label">数量</label>
+            <input type="text" v-model="newData.count" class="form-control" value="{{count}}">
+        </div>
+        <button class="btn btn-block" @click="add(newData)">添加</button>
+    </div>
+</div>
+<script src="../vue.js"></script>
+<script>
+    var vm=new Vue({
+        el:'#app',
+        data:{
+            phones:[
+                {name:'三星',price:4000,count:1},
+                {name:'诺基亚',price:200,count:1},
+                {name:'小米',price:300,count:1},
+                {name:'金立',price:2800,count:1}
+            ]
+        },
+        methods:{
+            del:function (phone) {
+                //$remove():删除,还有filter也可以删
+                this.phones.$remove(phone);
+            },
+            add:function (data) {
+                var arr={};
+                arr['name']=data['name'];
+                arr['price']=data['price'];
+                arr['count']=data['count'];
+                this.phones.push(arr);
+            },
+            total:function () {
+                var sum = 0;
+                this.phones.forEach(function (item) {
+                    sum += item.count * item.price;
+                });
+                return sum;
+            }
+        },
+        newData:[
+            {name:null,price:null,count:null}
+        ]
+    });
+
+    var arr=[1,2,3,4];
+    arr=arr.filter(function (item) {
+        return item!=1
+    });
+    console.log(arr);
+</script>
+</body>
+</html>

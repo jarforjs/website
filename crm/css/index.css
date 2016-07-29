@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+    font-size: 14px;
+    color: #424242;
+}
+
+ul li{
+    list-style: none;
+}
+
+span{
+    display: block;
+}
+
+a,a:hover,a:active,a:visited,a:target{
+    display: block;
+    text-decoration: none;
+    color: #424242;
+}
+
+.box{
+    margin: 20px auto;
+    width:942px;
+}
+
+a.add{
+    height:35px;
+    line-height:35px;
+    font-size: 20px;
+    color: green;
+}
+
+h2{
+    font-size: 16px;
+}
+
+.tab{
+    padding:20px;
+    border: 1px solid #424242;
+    overflow: hidden;
+}
+
+.tab h2{
+    height:35px;
+    line-height:35px;
+    background: green;
+}
+.tab h2 span{
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.w50{
+    width:50px;
+}
+.w100{
+    width:100px;
+}
+.w150{
+    width:150px;
+}
+.w200{
+    width:200px;
+}
+.w250{
+    width:250px;
+}
+
+.tab li{
+    height:35px;
+    line-height:35px;
+    cursor: pointer;
+}
+.tab li span{
+    float: left;
+    .width:200px;
+    text-align: center;
+}
+.tab li:nth-child(even){
+    background: linen;
+}
+.tab li:hover{
+    background: lightgoldenrodyellow;
+}
+
+.tab li .last a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+
+input{
+    display: inline-block;
+
+}
+.mark{
+    width:500px;
+    padding:20px;
+    margin:20px auto;
+    border: 1px solid #424242;
+}
+.mark div{
+    height:50px;
+}
+.mark div span{
+    display: inline-block;
+    line-height:50px;
+}
+.mark div input{
+    border:1px solid #999999;
+    height:28px;
+    width:390px;
+    margin-left: 20px;
+    padding:0 5px;
+}
+#userAge{
+    width:195px;
+    text-align: center;
+}
+#submit{
+    width:200px;
+    height:35px;
+    line-height:35px;
+    text-align: center;
+    border:1px solid #41beff;
+    cursor: pointer;
+    margin:10px auto;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appModule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="angular-csp.css">
+</head>
+<body ng-controller="ctrl">
+<table class="table table-bordered" ng-cloak>
+    <tr>
+        <td>序号</td>
+        <td>书名</td>
+        <td>价格</td>
+        <td>页数</td>
+        <td>数量</td>
+        <td>小计</td>
+        <td>操作</td>
+    </tr>
+    <tr ng-repeat="book in books">
+        <td>{{$index+1}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.price}}</td>
+        <td>{{book.page}}</td>
+        <td><input type="text" ng-model="book.count"></td>
+        <td>{{book.price*book.count}}</td>
+        <td><button class="btn-danger btn" ng-click="books.splice($index,1)">删除</button></td>
+    </tr>
+    <tr>
+        <td colspan="7" ng-show="books.length">
+            总额：{{total()}}
+        </td>
+    </tr>
+</table>
+<script src="../angular.js"></script>
+<script>
+    var app=angular.module('appModule',[]);
+    app.controller('ctrl',function ($scope,$http) {
+        //$http和jquery的ajax一样
+        /*$http({
+            url:'./book.json',
+            method:'GET'
+        }).success(function (data) {
+            //如果数据是字符串格式,默认转换成json
+            $scope.books=data;
+        });*/
+        $http.get('./book.json').success(function (data) {
+            //如果数据是字符串格式,默认转换成json
+            $scope.books=data;
+        });
+
+        //jquery
+        /*$.ajax({
+            url:'./book.json',
+            type:'GET'
+        }).success(function () {
+
+        }).error(function () {
+
+        })*/
+        //console.log(angular.toJson($scope.books));
+        $scope.total=function () {
+            var sum=0;
+            angular.forEach($scope.books,function (item) {
+                sum+=item.count*item.price;
+            });
+            return sum;
+            /*var sum=0;
+            $scope.books.forEach(function (item, index) {
+                sum+=item.price*item.count;
+            });
+            return sum;*/
+        };
+    })
+</script>
+</body>
+</html>
