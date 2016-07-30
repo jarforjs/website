@@ -44,7 +44,7 @@
             //如果数据是字符串格式,默认转换成json
             $scope.books=data;
         });*/
-        $http.get('./book.json').success(function (data) {
+        $http.get('book.json').success(function (data) {
             //如果数据是字符串格式,默认转换成json
             $scope.books=data;
         });
